@@ -1,22 +1,18 @@
 <template>
-  <div class="main">
-    <Navbar></Navbar>
-    <sidebar></sidebar>
-    <main></main>
+<div class="navbar">
+    <div class="bar">
+        <h1>{{ msg }}</h1>
+    </div>
   </div>
 </template>
 
 <script>
-import Navbar from './Navbar.vue';
 export default {
-  name: 'main',
+  name: 'navbar',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'News'
     };
-  },
-  components: {
-    Navbar
   }
 };
 </script>
@@ -24,12 +20,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
-  font-weight: normal;
+    font-weight: large;
+    text-align:center;
+    padding: .5%;
+    font-size: 1em;
 }
 
-.main {
-  width: 100%;
-  height: 100%;
+.navbar {
+    width: 100%;
+    position: absolute; left: 0%; top: 0%;
+    background-color: brown;
 }
 
 ul {
