@@ -3,6 +3,8 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import 'vue-awesome/icons';
+import Icon from 'vue-awesome/components/Icon';
 
 Vue.config.productionTip = false;
 
@@ -13,3 +15,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 });
+
+Vue.component('icon', Icon);

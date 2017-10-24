@@ -1,18 +1,28 @@
 <template>
 <div class="navbar">
     <div class="bar">
-        <h1>{{ msg }}</h1>
+        <h1>
+            <icon name="bars" class="menu"></icon>
+            <p>{{ msg }}</p>
+        </h1>
     </div>
+
+
   </div>
 </template>
 
 <script>
+import Icon from 'vue-awesome/components/Icon';
+
 export default {
   name: 'navbar',
   data() {
     return {
       msg: 'News'
     };
+  },
+  components: {
+    Icon
   }
 };
 </script>
@@ -24,6 +34,18 @@ h1, h2 {
     text-align:center;
     padding: .5%;
     font-size: 1em;
+}
+
+h1>p {
+    margin:0%;
+    position: absolute; left: 45%;
+}
+
+h1>.menu {
+    float:left;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:5%;
 }
 
 .navbar {
