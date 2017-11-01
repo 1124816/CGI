@@ -2,7 +2,7 @@
 <div class="navbar">
     <div class="bar">
         <h1>
-            <icon name="bars" class="menu"></icon>
+            <button v-on:click="navbar" class="menub"><icon name="bars" class="menu"></icon></button>
             <p>{{ msg }}</p>
         </h1>
     </div>
@@ -23,6 +23,12 @@ export default {
   },
   components: {
     Icon
+  },
+  props: ['sidebarstat'],
+  methods: {
+    navbar: function(event) {
+      console.log('hello');
+    }
   }
 };
 </script>
@@ -41,17 +47,17 @@ h1>p {
     position: absolute; left: 45%;
 }
 
-h1>.menu {
-    float:left;
-    padding-left:5%;
-    padding-right:5%;
-    padding-bottom:5%;
-}
-
 .navbar {
     width: 100%;
     position: absolute; left: 0%; top: 0%;
     background-color: brown;
+}
+
+.menub {
+    float:left;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:5%;
 }
 
 ul {

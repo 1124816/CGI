@@ -1,7 +1,6 @@
 <template>
   <div class="main">
-    <Navbar></Navbar>
-    <sidebar></sidebar>
+    <Navbar sidebarstat={{}}></Navbar>
     <main></main>
   </div>
 </template>
