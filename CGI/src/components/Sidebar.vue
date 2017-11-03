@@ -2,7 +2,6 @@
 <div class="navbar">
     <div class="bar">
         <h1>
-            <button v-on:click="navbar" class="menub"><icon name="bars" class="menu"></icon></button>
             <p>{{ msg }}</p>
         </h1>
     </div>
@@ -27,7 +26,6 @@ export default {
   methods: {
     navbar: function(event) {
       console.log('open');
-      this.$emit('clicked', 'open');
     }
   }
 };
@@ -42,20 +40,16 @@ h1, h2 {
     font-size: 1em;
 }
 
-.menu {
-    height:3vh;
-}
-
 h1>p {
     margin:0%;
     float:center;
-    font-size:3vh;
 }
 
 .navbar {
-    width: 100%;
-    position: absolute; left: 0%; top: 0%;
-    background-color: brown;
+    width: 80%;
+    height: 92.5%;
+    position: absolute; left: 0%; top: 7.5%;
+    background-color: coral;
 }
 
 .menub {

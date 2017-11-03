@@ -1,21 +1,32 @@
 <template>
   <div class="main">
-    <Navbar sidebarstat={{}}></Navbar>
+      <Navbar @clicked="openSidebar"></Navbar>
+      <Sidebar v-show="isSidebarOpen"></Sidebar>
     <main></main>
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar.vue';
+import Sidebar from './Sidebar.vue';
+var data = {
+  msg: 'Welcome to Your Vue.js App',
+  isSidebarOpen: false
+};
 export default {
   name: 'main',
   data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    };
+    return data;
   },
   components: {
-    Navbar
+    Navbar,
+    Sidebar
+  },
+  methods: {
+    openSidebar(value) {
+      console.log(data.isSidebarOpen);
+      data.isSidebarOpen = !data.isSidebarOpen;
+    }
   }
 };
 </script>
