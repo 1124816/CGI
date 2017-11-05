@@ -1,7 +1,9 @@
 <template>
   <div class="main">
       <Navbar @clicked="openSidebar"></Navbar>
+      <transition name="slide">
       <Sidebar v-show="isSidebarOpen"></Sidebar>
+      </transition>
     <main></main>
   </div>
 </template>
@@ -45,6 +47,17 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: .4s;
+}
+.slide-enter {
+  transform: translate(-100%, 0);
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
 }
 
 li {

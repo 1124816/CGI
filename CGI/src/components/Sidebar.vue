@@ -1,9 +1,13 @@
 <template>
 <div class="navbar">
     <div class="bar">
-        <h1>
-            <p>{{ msg }}</p>
-        </h1>
+        <ul id="example-1">
+            <li v-for="item in items" class="pagesli">
+            <button class="pages" :id="item.name" v-on:click="move">
+            {{ item.name }}
+            </button>
+          </li>
+        </ul>
     </div>
 
 
@@ -17,14 +21,14 @@ export default {
   name: 'navbar',
   data() {
     return {
-      msg: 'News'
+      items: [{name: 'News'}, {name: 'Climbs'}, {name: 'Friends'}, {name: 'Settings'}]
     };
   },
   components: {
     Icon
   },
   methods: {
-    navbar: function(event) {
+    move: function(event) {
       console.log('open');
     }
   }
@@ -48,16 +52,29 @@ h1>p {
 .navbar {
     width: 80%;
     height: 92.5%;
-    position: absolute; left: 0%; top: 7.5%;
+    position: absolute; left: 0%; top: 6.8%;
     background-color: coral;
 }
 
+
+.pagesli {
+    width: 90%;
+}
+
+.pages {
+    width: 100%;
+    background-color: coral;
+    border: 0px solid;
+    font-size: 1.5em;
+    margin: 2%;
+}
+
 .menub {
-    float:left;
-    margin-left:2%;
-    margin-right:2%;
-    margin-bottom:1%;
-    background-color: brown;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    background-color:  brown;
     border: 0px solid;
 }
 

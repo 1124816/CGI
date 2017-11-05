@@ -1,10 +1,8 @@
 <template>
 <div class="navbar">
     <div class="bar">
-        <h1>
-            <button v-on:click="navbar" class="menub"><icon name="bars" class="menu"></icon></button>
-            <p>{{ msg }}</p>
-        </h1>
+        <button v-on:click="navbar" class="menub"><icon name="bars" class="menu"></icon></button>
+        <p class="title">{{ msg }}</p>
     </div>
 
 
@@ -35,21 +33,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-    font-weight: large;
+.bar {
     text-align:center;
-    padding: .5%;
-    font-size: 1em;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
 }
 
 .menu {
-    height:3vh;
+    width: auto;
+    height: 3.6vh;
 }
 
-h1>p {
-    margin:0%;
-    float:center;
-    font-size:3vh;
+.title {
+    font-size:4vh;
+    padding: 0%;
+    margin: 15%;
+    font-weight: bold;
 }
 
 .navbar {
@@ -59,7 +58,7 @@ h1>p {
 }
 
 .menub {
-    float:left;
+    grid-column-start: 0;
     margin-left:2%;
     margin-right:2%;
     margin-bottom:1%;
