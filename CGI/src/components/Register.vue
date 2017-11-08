@@ -1,6 +1,5 @@
 <template>
   <div class="register">
-    <Bars></Bars>
     <input 
       type="email"
       name="email"
@@ -21,7 +20,6 @@
 
 <script>
 import AuthService from '@/services/AuthenticationService.js';
-import Bars from '@/components/Hello.vue';
 export default {
   name: 'register',
   data() {
@@ -31,7 +29,6 @@ export default {
     };
   },
   components: {
-    Bars
   },
   methods: {
     async register() {

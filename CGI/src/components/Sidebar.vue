@@ -3,9 +3,9 @@
     <div class="bar">
         <ul id="example-1">
             <li v-for="item in items" class="pagesli">
-            <button class="pages" :id="item.name" v-on:click="move">
-            {{ item.name }}
-            </button>
+                <button  v-on:click="move" class="pages" :id="item.link">
+                    {{ item.name }}
+                </button>
           </li>
         </ul>
     </div>
@@ -21,7 +21,7 @@ export default {
   name: 'navbar',
   data() {
     return {
-      items: [{name: 'News'}, {name: 'Climbs'}, {name: 'Friends'}, {name: 'Settings'}]
+      items: [{name: 'News', link: '/'}, {name: 'Register', link: 'register'}, {name: 'Friends', link: 'friends'}, {name: 'Settings', link: 'settings'}]
     };
   },
   components: {
@@ -29,7 +29,9 @@ export default {
   },
   methods: {
     move: function(event) {
-      console.log('open');
+      console.log(event);
+      this.$emit('clicked', 'open');
+      this.$router.push(event.target.id);
     }
   }
 };
@@ -51,7 +53,7 @@ h1>p {
 
 .navbar {
     width: 80%;
-    height: 92.5%;
+    height: 93.2%;
     position: absolute; left: 0%; top: 6.8%;
     background-color: coral;
 }
@@ -67,6 +69,8 @@ h1>p {
     border: 0px solid;
     font-size: 1.5em;
     margin: 2%;
+    text-decoration: none;
+    color: #2C3E50;
 }
 
 .menub {
@@ -88,7 +92,4 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
-}
 </style>
