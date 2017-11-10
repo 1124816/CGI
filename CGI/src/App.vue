@@ -1,10 +1,10 @@
 <template>
 <div id="app">
-    <Navbar @clicked="openSidebar"></Navbar>
+    <Navbar @clicked="openSidebar" :name="$route.name"></Navbar>
     <transition name="slide">
         <Sidebar v-show="isSidebarOpen" @clicked="openSidebar"></Sidebar>
     </transition>
-    <router-view></router-view>
+    <router-view class="router-view"></router-view>
 </div>
 </template>
 
@@ -39,6 +39,11 @@ h1, h2 {
   font-weight: normal;
 }
 
+.router-view {
+    position: absolute; left: 0%; top: 6.8%;
+    width: 100%;
+    z-index:1;
+}
 .main {
   width: 100%;
   height: 100%;
@@ -51,7 +56,7 @@ ul {
 
 .slide-leave-active,
 .slide-enter-active {
-  transition: .4s;
+  transition: .2s;
 }
 .slide-enter {
   transform: translate(-100%, 0);

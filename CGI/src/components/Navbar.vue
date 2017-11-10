@@ -2,7 +2,7 @@
 <div class="navbar">
     <div class="bar">
         <button v-on:click="navbar" class="menub"><icon name="bars" class="menu"></icon></button>
-        <p class="title">{{ msg }}</p>
+        <p class="title">{{ name }}</p>
     </div>
 
 
@@ -22,6 +22,7 @@ export default {
   components: {
     Icon
   },
+  props: ['name'],
   methods: {
     navbar: function(event) {
       console.log('open');
@@ -53,8 +54,9 @@ export default {
 
 .navbar {
     width: 100%;
-    position: absolute; left: 0%; top: 0%;
+    position: fixed; left: 0%; top: 0%;
     background-color: brown;
+    z-index:2;
 }
 
 .menub {

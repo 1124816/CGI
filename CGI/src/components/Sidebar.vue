@@ -21,7 +21,7 @@ export default {
   name: 'navbar',
   data() {
     return {
-      items: [{name: 'News', link: '/'}, {name: 'Register', link: 'register'}, {name: 'Friends', link: 'friends'}, {name: 'Settings', link: 'settings'}]
+      items: [{name: 'News', link: '/'}, {name: 'Register', link: 'register'}, {name: 'Climbs', link: 'climbs'}, {name: 'Profile', link: 'profile'}, {name: 'Settings', link: 'settings'}]
     };
   },
   components: {
@@ -54,8 +54,9 @@ h1>p {
 .navbar {
     width: 80%;
     height: 93.2%;
-    position: absolute; left: 0%; top: 6.8%;
+    position: fixed; left: 0%; top: 6.8%;
     background-color: coral;
+    z-index:2;
 }
 
 

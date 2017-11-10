@@ -1,9 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Hello from '@/components/Hello';
+import Climbs from '@/components/Climbs';
+import Route from '@/components/Route';
+import News from '@/components/News';
 import Register from '@/components/Register';
 import Settings from '@/components/Settings';
-import Friends from '@/components/Friends';
+import Profile from '@/components/Friends';
 
 Vue.use(Router);
 
@@ -11,8 +13,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'News',
+      component: News
+    },
+    {
+      path: '/climbs',
+      name: 'Climbs',
+      component: Climbs
+    },
+    {
+      path: '/route',
+      name: 'Route',
+      component: Route
     },
     {
       path: '/register',
@@ -25,9 +37,9 @@ export default new Router({
       component: Settings
     },
     {
-      path: '/friends',
-      name: 'Friends',
-      component: Friends
+      path: '/profile',
+      name: 'Profile',
+      component: Profile
     }
   ]
 });
