@@ -1,4 +1,5 @@
 <template>
+
 <div class="navbar">
     <div class="bar">
         <button v-on:click="navbar" class="menub"><icon name="bars" class="menu"></icon></button>

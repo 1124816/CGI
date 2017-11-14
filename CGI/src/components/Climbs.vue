@@ -1,8 +1,7 @@
 <template>
   <div class="register">
     <RoadMap></RoadMap>
-    <TrailMap></TrailMap>
-    <TrailMap></TrailMap>
+    
   </div>
 </template>
 

@@ -1,14 +1,18 @@
 <template>
   <div class="register">
+    <MainPhoto></MainPhoto>
     <RoadMap></RoadMap>
-    <TrailMap></TrailMap>
-    <TrailMap></TrailMap>
+    <About @clicked="routeAbout"></About>
+    <Reviews></Reviews>
   </div>
 </template>
 
 <script>
 import RoadMap from '@/components/Map.vue';
 import TrailMap from '@/components/TrailMap.vue';
+import MainPhoto from '@/components/MainPhoto.vue';
+import Reviews from '@/components/Reviews.vue';
+import About from '@/components/About.vue';
 
 export default {
   name: 'register',
@@ -18,9 +22,15 @@ export default {
   },
   components: {
     RoadMap,
-    TrailMap
+    TrailMap,
+    MainPhoto,
+    Reviews,
+    About
   },
   methods: {
+    routeAbout(event) {
+      this.$router.push('About');   
+    }
   }
 };
 </script>
