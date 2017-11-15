@@ -3,7 +3,7 @@
     <MainPhoto></MainPhoto>
     <RoadMap></RoadMap>
     <About @clicked="routeAbout"></About>
-    <Reviews></Reviews>
+    <Reviews @clicked="routeReview"></Reviews>
   </div>
 </template>
 
@@ -29,7 +29,10 @@ export default {
   },
   methods: {
     routeAbout(event) {
-      this.$router.push('About');   
+      this.$router.push('About');
+    },
+    routeReview(event) {
+      this.$router.push('Review');
     }
   }
 };

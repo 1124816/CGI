@@ -6,6 +6,7 @@ import News from '@/components/News';
 import Register from '@/components/Register';
 import Settings from '@/components/Settings';
 import Profile from '@/components/Friends';
+import About from '@/components/About';
 
 Vue.use(Router);
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'News',
       component: News
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
     },
     {
       path: '/climbs',

@@ -1,14 +1,10 @@
 <template>
   <div class="map" v-on:click="routermap">
-      <h2>Reviews</h2>
-      <Review></Review>
-      <Review></Review>
+      <p>Is cool!</p>
   </div>
 </template>
 
 <script>
-import Review from '@/components/Sreview.vue';
-
 export default {
   name: 'register',
   data() {
@@ -16,12 +12,8 @@ export default {
     };
   },
   components: {
-    Review
   },
   methods: {
-    routermap(event) {
-      this.$emit('clicked', 'map');
-    }
   }
 };
 </script>
@@ -29,7 +21,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .map {
-    background-color: grey;
+    background-color: darkgrey;
     padding: 2%;
     display: grid;
     grid-template-columns: 100%;
