@@ -1,5 +1,5 @@
 <template>
-  <div class="map" v-on:click="routermap">
+  <div class="page" v-on:click="routermap">
       <h2>Reviews</h2>
       <Review></Review>
       <Review></Review>
@@ -28,15 +28,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .map {
-    background-color: #795548;
-    padding: 2%;
-    margin: 3%;
-    color: #212121;
+  .page {
+    background-color: #D7CCC8;
+    width: 100%;
+    height: 100%;
   }
 
   h2 {
     margin: 0%;
+    padding: 1%;
   }
-
 </style>

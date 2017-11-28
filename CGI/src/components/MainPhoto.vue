@@ -33,7 +33,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .map {
-    background-color: grey;
+    background-color: #795548;
     padding: 2%;
     display: grid;
     grid-template-columns: 75% 25%;
@@ -49,6 +49,7 @@ export default {
     width: 100%;
     grid-column-start: 2;
     text-align: left;
+    color: #212121;
   }
 
   .car {

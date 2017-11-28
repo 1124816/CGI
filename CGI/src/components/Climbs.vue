@@ -1,13 +1,18 @@
 <template>
   <div class="register">
-    <RoadMap></RoadMap>
-    
+    <MainPhoto></MainPhoto>
+    <RoadMap></RoadMap>    
+    <About @clicked="routeAbout"></About>
+    <Reviews @clicked="routeReview"></Reviews>
   </div>
 </template>
 
 <script>
 import RoadMap from '@/components/Map.vue';
 import TrailMap from '@/components/TrailMap.vue';
+import MainPhoto from '@/components/MainPhoto.vue';
+import Reviews from '@/components/Reviews.vue';
+import About from '@/components/About.vue';
 
 export default {
   name: 'register',
@@ -17,9 +22,18 @@ export default {
   },
   components: {
     RoadMap,
-    TrailMap
+    TrailMap,
+    MainPhoto,
+    Reviews,
+    About
   },
   methods: {
+    routeAbout(event) {
+      this.$router.push('About');
+    },
+    routeReview(event) {
+      this.$router.push('Review');
+    }
   }
 };
 </script>
@@ -27,6 +41,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .register {
-    background-color: green;
+    background-color: #D7CCC8;
   }
 </style>

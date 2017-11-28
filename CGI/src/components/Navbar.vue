@@ -39,11 +39,13 @@ export default {
     text-align:center;
     display: grid;
     grid-template-columns: 10% auto 10%;
+    color: #FFFFFF;
 }
 
 .menu {
     width: auto;
     height: 3.6vh;
+    color: #FFFFFF;
 }
 
 .title {
@@ -56,7 +58,7 @@ export default {
 .navbar {
     width: 100%;
     position: fixed; left: 0%; top: 0%;
-    background-color: brown;
+    background-color: #5D4037;
     z-index:2;
 }
 
@@ -65,7 +67,7 @@ export default {
     margin-left:2%;
     margin-right:2%;
     margin-bottom:1%;
-    background-color: brown;
+    background-color: #5D4037;
     border: 0px solid;
 }
 
@@ -77,9 +79,5 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-
-a {
-  color: #42b983;
 }
 </style>

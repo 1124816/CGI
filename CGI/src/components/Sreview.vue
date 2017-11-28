@@ -1,5 +1,6 @@
 <template>
   <div class="map" v-on:click="routermap">
+      <img id="avatar" src="../assets/avatar.jpg">
       <p>Is cool!</p>
   </div>
 </template>
@@ -21,20 +22,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .map {
-    background-color: darkgrey;
+    background-color: #795548;
+    width: 80%;
+    margin: 2% auto;
     padding: 2%;
     display: grid;
-    grid-template-columns: 100%;
-    margin: 3%;
+    grid-template-columns: 30% auto;
   }
 
-  #imap {
-    width: 100%;
+  #avatar {
     grid-column-start: 0;
   }
 
-  h2 {
-    margin: 0%;
+  p {
+    grid-column-start: 2;
   }
-
 </style>

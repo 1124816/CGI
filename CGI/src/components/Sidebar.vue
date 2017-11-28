@@ -55,7 +55,7 @@ h1>p {
     width: 80%;
     height: 93.2%;
     position: fixed; left: 0%; top: 6.8%;
-    background-color: coral;
+    background-color: #795548;
     z-index:2;
 }
 
@@ -66,12 +66,12 @@ h1>p {
 
 .pages {
     width: 100%;
-    background-color: coral;
+    background-color: #795548;
     border: 0px solid;
     font-size: 1.5em;
     margin: 2%;
     text-decoration: none;
-    color: #2C3E50;
+    color: #FFFFFF;
 }
 
 .menub {
@@ -79,7 +79,7 @@ h1>p {
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 1%;
-    background-color:  brown;
+    background-color:  #795548;
     border: 0px solid;
 }
 

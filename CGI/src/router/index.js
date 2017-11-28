@@ -7,6 +7,7 @@ import Register from '@/components/Register';
 import Settings from '@/components/Settings';
 import Profile from '@/components/Friends';
 import About from '@/components/About';
+import Review from '@/components/ReviewPage';
 
 Vue.use(Router);
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'News',
       component: News
+    },
+    {
+      path: '/review',
+      name: 'Review',
+      component: Review
     },
     {
       path: '/about',

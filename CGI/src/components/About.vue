@@ -25,11 +25,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .map {
-    background-color: grey;
+    background-color: #795548;
     padding: 2%;
     display: grid;
     grid-template-columns: 100%;
     margin: 3%;
+    color: #212121;
   }
 
   #imap {
